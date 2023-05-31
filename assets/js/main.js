@@ -18,12 +18,6 @@ function crearElemento(nombre, altura, peso, color){
 
 let obtenerPersonaje = (id) => {
     return new Promise ( async (resolve) => {
-        /**
-         * obtenerData retorna una nueva promise, donde: 
-         * - asyncronamente hace fetch a 2 apis con el mismo id
-         * - formates la data a json
-         * - resuelve la promesa retornando un array con la data de la foto y el post del ID
-         */
         try {
             let urlPersonaje = `https://swapi.dev/api/people/${id}`;
             let respPersonaje = await fetch(urlPersonaje);
